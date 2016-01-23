@@ -9,7 +9,7 @@ public class BulletMover : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Rigidbody rb = GetComponent<Rigidbody>();
-		rb.velocity = transform.forward * speed;
+		rb.velocity = new Vector3 (0.0f, direction * speed, 0.0f);
 	}
 
 	// Update is called once per frame

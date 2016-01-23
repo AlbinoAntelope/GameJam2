@@ -17,14 +17,16 @@ public class EnemyController : MonoBehaviour {
 		transform.Translate (Vector3.up * direction * speed);
 	}
 
-	void OnCollisionEnter (Collision collision) {
-		GameObject gameObj = collision.collider.gameObject;
+	void OnTriggerEnter (Collider other) {
+		GameObject gameObj = other.gameObject;
 
 		if (gameObj.CompareTag ("Shot1")) {
 			direction = 1;
+			Destroy (other.gameObject);
 		}
 		if (gameObj.CompareTag ("Shot2")) {
 			direction = -1;
+			Destroy (other.gameObject);
 		}
 	}
 }

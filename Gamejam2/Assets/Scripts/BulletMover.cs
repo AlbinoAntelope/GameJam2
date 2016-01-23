@@ -4,6 +4,7 @@ using System.Collections;
 public class BulletMover : MonoBehaviour {
 
 	public float speed;
+	public float direction;
 
 	// Use this for initialization
 	void Start () {

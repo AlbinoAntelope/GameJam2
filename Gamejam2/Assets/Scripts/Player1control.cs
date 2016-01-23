@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class Player1control : MonoBehaviour {
-	
+
+	public float rot;
 	public float speed;
 	public float tilt;
 	public Boundary boundary;
@@ -47,6 +48,6 @@ public class Player1control : MonoBehaviour {
 				rb.position.y,
 				0.0f
 			);
-		rb.rotation = Quaternion.Euler (0.0f, 0.0f, moveHorizontal * -tilt);
+		rb.rotation = Quaternion.Euler (0.0f, moveHorizontal * -tilt, rot);
 	}
 }

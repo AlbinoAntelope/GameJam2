@@ -25,7 +25,7 @@ public class Player1control : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-		float moveHorizontal = Input.GetAxis("Horizontal");
+		float moveHorizontal = Input.GetAxis("H_1");
 		Vector3 moveVector = new Vector3 (moveHorizontal, 0.0f, 0.0f);
 		Rigidbody rb = GetComponent<Rigidbody>();
 		rb.velocity = moveVector * speed;

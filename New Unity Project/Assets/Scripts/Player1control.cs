@@ -32,7 +32,7 @@ public class Player1control : MonoBehaviour {
 		rb.position = new Vector3
 			(
 				Mathf.Clamp(rb.position.x, boundary.xMin, boundary.xMax),
-				Mathf.Clamp(rb.position.y, -100, 100),
+				rb.position.y,
 				0.0f
 			);
 		rb.rotation = Quaternion.Euler (0.0f, 0.0f, moveHorizontal * -tilt);
